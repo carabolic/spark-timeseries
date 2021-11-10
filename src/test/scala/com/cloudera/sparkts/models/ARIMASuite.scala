@@ -18,12 +18,12 @@ package com.cloudera.sparkts.models
 import com.cloudera.sparkts.UnivariateTimeSeries.{differencesOfOrderD, inverseDifferencesOfOrderD}
 import org.apache.commons.math3.random.MersenneTwister
 import org.apache.spark.mllib.linalg.DenseVector
-import org.scalatest.FunSuite
-import org.scalatest.Matchers._
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 
 import scala.util.{Success, Try}
 
-class ARIMASuite extends FunSuite {
+class ARIMASuite extends AnyFunSuite {
   test("compare with R") {
     // > R.Version()$version.string
     // [1] "R version 3.2.0 (2015-04-16)"

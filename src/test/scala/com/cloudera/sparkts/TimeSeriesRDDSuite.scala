@@ -27,11 +27,12 @@ import com.cloudera.sparkts.DateTimeIndex._
 import org.apache.spark.sql.{Row, SQLContext}
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.mllib.linalg.distributed.IndexedRow
-import org.scalatest.{FunSuite, ShouldMatchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 
 import scala.collection.Map
 
-class TimeSeriesRDDSuite extends FunSuite with LocalSparkContext with ShouldMatchers {
+class TimeSeriesRDDSuite extends AnyFunSuite with LocalSparkContext {
   test("slice") {
     val conf = new SparkConf().setMaster("local").setAppName(getClass.getName)
     TimeSeriesKryoRegistrator.registerKryoClasses(conf)

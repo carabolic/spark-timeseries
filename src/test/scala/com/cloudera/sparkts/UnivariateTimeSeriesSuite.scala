@@ -25,9 +25,10 @@ import com.cloudera.sparkts.UnivariateTimeSeries._
 
 import org.apache.commons.math3.random.MersenneTwister
 
-import org.scalatest.{FunSuite, ShouldMatchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 
-class UnivariateTimeSeriesSuite extends FunSuite with ShouldMatchers {
+class UnivariateTimeSeriesSuite extends AnyFunSuite {
   test("lagIncludeOriginalsTrue") {
     val lagMatrix = UnivariateTimeSeries.lag(Vectors.dense(1.0, 2.0, 3.0, 4.0, 5.0), 2, true)
     lagMatrix should be (Matrices.dense(3, 3, Array(3.0, 4.0, 5.0, 2.0, 3.0, 4.0, 1.0, 2.0, 3.0)))

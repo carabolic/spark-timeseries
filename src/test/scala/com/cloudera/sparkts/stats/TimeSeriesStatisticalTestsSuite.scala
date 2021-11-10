@@ -16,12 +16,13 @@
 package com.cloudera.sparkts.stats
 
 import com.cloudera.sparkts.stats.TimeSeriesStatisticalTests._
-import org.apache.commons.math.stat.regression.OLSMultipleLinearRegression
+import org.apache.commons.math3.stat.regression.OLSMultipleLinearRegression
 import org.apache.commons.math3.random.MersenneTwister
 import org.apache.spark.mllib.linalg._
-import org.scalatest.{FunSuite, ShouldMatchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 
-class TimeSeriesStatisticalTestsSuite extends FunSuite with ShouldMatchers {
+class TimeSeriesStatisticalTestsSuite extends AnyFunSuite {
   test("breusch-godfrey") {
     // Replicating the example provided by R package lmtest for bgtest
     val rand = new MersenneTwister(5L)

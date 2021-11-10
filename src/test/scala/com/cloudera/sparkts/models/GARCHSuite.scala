@@ -19,9 +19,9 @@ import com.cloudera.sparkts.MatrixUtil.toBreeze
 
 import org.apache.spark.mllib.linalg._
 import org.apache.commons.math3.random.MersenneTwister
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 
-class GARCHSuite extends FunSuite {
+class GARCHSuite extends AnyFunSuite {
   test("GARCH log likelihood") {
     val model = new GARCHModel(.2, .3, .4)
     val rand = new MersenneTwister(5L)

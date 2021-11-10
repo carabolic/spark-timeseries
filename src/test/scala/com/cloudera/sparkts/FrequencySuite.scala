@@ -18,9 +18,11 @@ package com.cloudera.sparkts
 import java.time._
 import com.cloudera.sparkts.DateTimeIndex._
 
-import org.scalatest.{FunSuite, ShouldMatchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 
-class FrequencySuite extends FunSuite with ShouldMatchers {
+
+class FrequencySuite extends AnyFunSuite {
   test("business days") {
     def caseOf(aDay: ZonedDateTime, firstDayOfWeek: Int): Unit = {
       // don't cross a weekend

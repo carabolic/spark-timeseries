@@ -21,12 +21,13 @@ import java.time.format._
 import com.cloudera.sparkts.DateTimeIndex._
 import com.cloudera.sparkts.TimeSeries._
 
-import org.scalatest.{FunSuite, ShouldMatchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 
 import MatrixUtil._
 import TimeSeries._
 
-class TimeSeriesSuite extends FunSuite with ShouldMatchers {
+class TimeSeriesSuite extends AnyFunSuite {
   test("timeSeriesFromIrregularSamples") {
     val dt = ZonedDateTime.of(2015, 4, 8, 0, 0, 0, 0, ZoneId.of("Z"))
     val samples = Array(

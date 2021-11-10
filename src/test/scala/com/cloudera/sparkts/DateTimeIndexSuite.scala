@@ -15,13 +15,14 @@
 
 package com.cloudera.sparkts
 
-import org.scalatest.{FunSuite, ShouldMatchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 import java.time._
 import java.time.format._
 import com.cloudera.sparkts.DateTimeIndex._
 import org.threeten.extra.Interval
 
-class DateTimeIndexSuite extends FunSuite with ShouldMatchers {
+class DateTimeIndexSuite extends AnyFunSuite {
 
   val UTC = ZoneId.of("Z")
 

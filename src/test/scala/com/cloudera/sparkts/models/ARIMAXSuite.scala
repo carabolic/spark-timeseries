@@ -17,10 +17,10 @@ package com.cloudera.sparkts.models
 
 import breeze.linalg.{DenseMatrix, DenseVector => BreezeDenseVector}
 import org.apache.spark.mllib.linalg.DenseVector
-import org.scalatest.FunSuite
-import org.scalatest.Matchers._
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 
-class ARIMAXSuite extends FunSuite {
+class ARIMAXSuite extends AnyFunSuite {
   // Data from http://www.robjhyndman.com/data/ - command to use this data available on website
   // robjhyndman.com/talks/RevolutionR/exercises1.pdf
 

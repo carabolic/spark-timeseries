@@ -21,9 +21,9 @@ import com.cloudera.sparkts.MatrixUtil.toBreeze
 
 import org.apache.spark.mllib.linalg._
 import org.apache.commons.math3.random.MersenneTwister
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 
-class AutoregressionSuite extends FunSuite {
+class AutoregressionSuite extends AnyFunSuite {
   test("fit AR(1) model") {
     val model = new ARModel(1.5, Array(.2))
     val ts = model.sample(5000, new MersenneTwister(10L))

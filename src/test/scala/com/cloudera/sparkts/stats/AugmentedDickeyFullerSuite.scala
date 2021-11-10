@@ -17,9 +17,9 @@ package com.cloudera.sparkts.stats
 import com.cloudera.sparkts.models.ARModel
 import org.apache.commons.math3.random.MersenneTwister
 import org.apache.spark.mllib.linalg.DenseVector
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 
-class AugmentedDickeyFullerSuite extends FunSuite {
+class AugmentedDickeyFullerSuite extends AnyFunSuite {
   test("non-stationary AR model") {
     val rand = new MersenneTwister(10L)
     val arModel = new ARModel(0.0, .95)

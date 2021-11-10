@@ -15,11 +15,11 @@
 
 package com.cloudera.sparkts.models
 
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 import org.apache.spark.mllib.linalg._
-import org.scalatest.Matchers._
+import org.scalatest.matchers.should.Matchers._
 
-class HoltWintersModelSuite extends FunSuite {
+class HoltWintersModelSuite extends AnyFunSuite {
 
   /**
    * Ref : Examples in https://stat.ethz.ch/R-manual/R-devel/library/stats/html/HoltWinters.html

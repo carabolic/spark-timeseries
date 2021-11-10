@@ -22,9 +22,10 @@ import breeze.linalg._
 import com.cloudera.sparkts.DateTimeIndex._
 import com.cloudera.sparkts.TimeSeriesUtils._
 import java.time._
-import org.scalatest.{FunSuite, ShouldMatchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 
-class RebaseSuite extends FunSuite with ShouldMatchers {
+class RebaseSuite extends AnyFunSuite {
   private type Rebaser = Vector[Double] => Vector[Double]
   private val Z = ZoneId.of("Z")
 

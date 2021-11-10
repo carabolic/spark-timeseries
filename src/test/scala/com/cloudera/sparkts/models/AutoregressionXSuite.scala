@@ -19,10 +19,10 @@ import breeze.linalg._
 
 import org.apache.commons.math3.random.MersenneTwister
 import com.cloudera.sparkts.Lag
-import org.scalatest.FunSuite
-import org.scalatest.Matchers._
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers._
 
-class AutoregressionXSuite extends FunSuite {
+class AutoregressionXSuite extends AnyFunSuite {
   val rand = new MersenneTwister(10L)
   val nRows = 1000
   val nCols = 2
